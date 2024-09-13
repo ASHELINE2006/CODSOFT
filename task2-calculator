@@ -1,0 +1,39 @@
+#include<iostream.h>
+#include<stdlib.h>
+#include<conio.h>
+int main()
+{
+char m;
+double n1,n2,r;
+clrscr();
+cout<<"\n Enter anyone of the Operator to perform:"<<endl;
+cout<<"+"<<" - "<<" * "<<" / "<<endl<<endl;
+cin>>m;
+cout<<"\nEnter two numbers\n";
+cin>>n1;
+cin>>n2;
+switch(m)
+{
+case '+':
+r=n1+n2;
+cout<<"\n"<<n1<<" + "<<n2<<" = "<<r;
+break;
+case '-':
+r=n1-n2;
+cout<<"\n"<<n1<<" - "<<n2<<" = "<<r;
+break;
+case '*':
+r=n1*n2;
+cout<<"\n"<<n1<<" * "<<n2<<" = "<<r;
+break;
+case '/':
+r=n1/n2;
+cout<<"\n"<<n1<<" / "<<n2<<" = "<<r;
+break;
+default:
+cout<<"Error! Operator is not correct\n";
+break;
+}
+getch();
+return 0;
+}
