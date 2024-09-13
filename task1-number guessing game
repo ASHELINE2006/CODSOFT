@@ -1,0 +1,59 @@
+#include<iostream.h>
+#include<stdlib.h>
+#include<conio.h>
+#include<time.h>
+int main()
+{
+clrscr();
+int r,m,i,a,n,p,c,d;
+srand(time(0));
+m=10;
+r=rand()%m;
+cout<<"Let us start the number guessing game\n";
+cout<<"Guess the number between 0 to 9"<<endl;
+for(i=0;i<=20;i++)
+{
+cin>>a;
+n=r-1;
+p=r+1;
+c=r-2;
+d=r+2;
+if((a<0)||(a>9))
+{
+cout<<"\n The numbers should be only between 0 to 9"<<endl;
+cout<<"guess again"<<endl<<endl;
+}
+else if((a==n)||(a==p))
+{
+cout<<"\nThe guess is very close"<<endl;
+cout<<"guess again"<<endl<<endl;
+}
+else if(a==c)
+{
+cout<<"\nThe guess is low"<<endl;
+cout<<"guess again"<<endl<<endl;
+}
+else if(a==d)
+{
+cout<<"\nThe guess is high"<<endl;
+cout<<"guess again"<<endl<<endl;
+}
+else if(a<r)
+{
+cout<<"The guess is too low"<<endl;
+cout<<"guess again"<<endl<<endl;
+}
+else if(a>r)
+{
+cout<<"The guess is too high"<<endl;
+cout<<"guess again"<<endl<<endl;
+}
+else
+{
+cout<<"Your guess is correct"<<endl;
+break;
+}
+}
+getch();
+return 0;
+}
